@@ -1,12 +1,12 @@
-# Atmena Firmware
+# IEQ Firmware
 
-Firmware for Atmena indoor environment sensing hardware to get all sensor values and send data to web server. Built using Arduino AVR C/C++ (avr-g++) platform.
+Firmware for Indoor Environment Quality (IEQ) sensing hardware. Polls all sensors connected to microcontroller and sends data to web server. Built using Arduino AVR C/C++ (avr-g++) platform. Part of the Atmena Indoor Environment Quality sensing and analysis system built by Andrew Gillies, Aayush Rajasekaran, Nathan Woltman, and Tom Stesco. Read more at https://tstesco.github.io/atmena-indoor-env-quality/.
 
 ### Clone
 
 ```sh
-git clone https://github.com/TStesco/atmena-firmware.git
-cd atmena-firmware
+git clone https://github.com/TStesco/IEQ-firmware.git
+cd IEQ-firmware
 ```
 
 ### Configure
@@ -25,20 +25,11 @@ First make sure you have the Arduino IDE, if not you can download it from their 
 configure
 ```
 
-### Code
+### Code and usage
 
 Use the Sublime project (`firmware.sublime-project`) for writing code (or your text editor of choice) and the Arduino IDE to compile your code and upload it to the Arduino device.
 
 You can open the Arduino project sketch (in the Arduino IDE) for compilation to device by opening the `sketch/sketch.ino` file.
-
-#### Code Style:
-
-+ Indentation is 2 spaces
-+ Use camel case variable and function names (e.g. `sensorInput`, not `sensor_input` or `SensorInput`)
-+ Header guards will be formatted like so: fileName.toUpperCase().replace('.', '_')
-  + e.g. `SomeSensor.h` &rarr; `SOMESENSOR_H`
-+ Custom includes (`#include ""`) should come before library includes (`#include <>`) and then the include groups should be sorted alphabetically
-  + This rule may need to be broken in `sketch.ino` due to Arduino's poor build system
 
 ### Test
 
